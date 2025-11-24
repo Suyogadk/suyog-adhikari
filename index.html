@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suyog Adhikari Blog</title>
+    <style>
+        :root {
+            --bg: #0a1a33;
+            --text: #ffffff;
+            --card: #102542;
+            --nav: #0a1a33;
+            --accent: #3a7bd5;
+        }
+        body.theme2 {
+            --bg: #f9f6ef;
+            --text: #0a1a33;
+            --card: #ffffff;
+            --nav: #3a7bd5;
+            --accent: #0a1a33;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.3s;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: var(--nav);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .theme-toggle {
+            padding: 10px 20px;
+            background: var(--accent);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .theme-toggle:hover {
+            opacity: 0.8;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .posts, .about, .contact {
+            padding: 20px 40px;
+        }
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .post, .about-box, .contact-box {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .post:hover, .about-box:hover, .contact-box:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background: var(--nav);
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: var(--text);
+        }
+        footer .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+        footer .footer-links a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Suyog's Blog</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()">Theme</button>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to My Blog</h1>
+        <p>Hi, I'm <strong>Suyog Adhikari</strong> from Pokhara-31, Kaski.</p>
+        <p>Email: adhikarisuyog000@gmail.com</p>
+    </section>
+
+    <section id="blogs" class="posts">
+        <h2 class="section-title">Latest Blogs</h2>
+        <div class="posts-grid">
+            <div class="post">
+                <h3>Technology in Nepal</h3>
+                <p>Exploring the rapid growth of tech startups and digital services in Nepal.</p>
+            </div>
+            <div class="post">
+                <h3>Life in Pokhara</h3>
+                <p>A peaceful and beautiful city surrounded by nature and culture.</p>
+            </div>
+            <div class="post">
+                <h3>Web Development Tips</h3>
+                <p>Learn how to create responsive, modern, and dynamic websites easily.</p>
+            </div>
+            <div class="post">
+                <h3>My Coding Journey</h3>
+                <p>How I started learning programming and growing my skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-box">
+            <p>Hello! I'm <strong>Suyog Adhikari</strong>, a passionate learner and blogger from Pokhara. I love exploring technology, coding, traveling, and sharing knowledge with others. This blog is my space to express thoughts and document my learning journey.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-box">
+            <p>If you want to reach out for collaboration or inquiries, feel free to email me:</p>
+            <p><strong>adhikarisuyog000@gmail.com</strong></p>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Connect With Me</h3>
+        <div class="footer-links">
+            <a href="#home">Home</a> |
+            <a href="#blogs">Blogs</a> |
+            <a href="#contact">Contact</a>
+        </div>
+        <p>Made with ❤️ by Suyog Adhikari</p>
+        <p>Pokhara-31, Kaski • Email: <strong>adhikarisuyog000@gmail.com</strong></p>
+        <p>© 2025 All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('theme2');
+        }
+    </script>
+</body>
+</html>
